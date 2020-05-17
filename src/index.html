@@ -2,9 +2,101 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
+      <div id="sidebar" class="leaflet-sidebar collapsed">
+
+        <!-- nav tabs -->
+        <div class="leaflet-sidebar-tabs">
+            <!-- top aligned tabs -->
+            <ul role="tablist">
+                <li><a href="#home" role="tab"><i class="fa fa-bars active"></i></a></li>
+                <li><a href="#autopan" role="tab"><i class="fa fa-gear"></i></a></li>
+            </ul>
+
+            <!-- bottom aligned tabs -->
+            <ul role="tablist">
+                <li><a href="https://github.com/pjgueno/cdv"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+    <div class="leaflet-sidebar-content">
+            <div class="leaflet-sidebar-pane" id="home">
+                <h1 class="leaflet-sidebar-header">
+                    Atlas 1833
+                    <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+
+                <p><b>Atlas des limites entre la France et la Prusse (1833)</b><br>
+                    <b>Atlas der Grenzen zwischen Frankreich und Preußen (1833)</b></p>
+                
+                <p><a href="http://www.archives57.com/">Archives départementales de la Moselle</a></p>
+
+                <p><b>FR</b> | Cet atlas, composé de 28 vues numériques et identifié au sein de nos fonds par la cote CP1679, a été dressé en 1833 à la suite de la Convention du 23 octobre 1829 entre la France et la Prusse, destinée à fixer la frontière entre les deux pays. Chaque image montre une portion de frontière ainsi qu'un plan du territoire frontalier français et du territoire frontalier prussien (aujourd'hui devenu Land de Sarre). Les métadonnées associées aux images sont de cinq types différents : cote de l'image, description de l'image (aucun vocabulaire contrôlé n'a été employé et les noms des communes sont parfois des variantes anciennes des noms actuels), dates extrêmes (en l'occurrence 1829-1833) et nom du fichier image. Chaque image contient le plan d'une commune française et d'une Bürgermeisterei prussienne de part et d'autre de la frontière, depuis Kirsch-lès-Sierck (Moselle) et Perl (Sarre) jusqu'à Sarreguemines (Moselle) et Kleinblittersdorf (Sarre).
+                </p>
+                
+                 <p><b>DE</b> | Dieser Atlas, der aus 28 digitalen Ansichten besteht und in unseren Beständen durch das Symbol CP1679 gekennzeichnet ist, wurde 1833 nach der Grenzkonvention vom 23. Oktober 1829 zwischen Frankreich und Preußen erstellt, um die Grenze zwischen beiden Ländern zu bestimmen. Jedes Bild zeigt einen Grenzabschnitt sowie eine Karte des französischen Grenzgebiets und des preußischen Grenzgebiets (heutiges Saarland). Es gibt fünf verschiedene Arten von Metadaten, die den Bildern zugeordnet sind: Signatur, Bildbeschreibung (es wurde kein kontrolliertes Vokabular verwendet und die Namen der Gemeinden sind manchmal alte Varianten der aktuellen Namen), extreme Daten (im vorliegenden Falle 1829-1833) und Name der Bilddatei. Jedes Bild enthält die Karte einer französischen Gemeinde und einer preußischen Bürgermeisterei auf beiden Seiten der Grenze, von Kirsch-lès-Sierck (Mosel) und Perl (Saarland) bis Saargemünd (Mosel) und Kleinblittersdorf (Saarland).
+                </p>
+                <p>
+                <iframe src="https://player.vimeo.com/video/405721835" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </p>
+                
+            </div>
+
+            <div class="leaflet-sidebar-pane" id="autopan">
+                <h1 class="leaflet-sidebar-header">
+                    Contrôles
+                    <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+                 <p>
+                     <b>Opacité</b>
+                </p>
+                <p>
+                   <input type="range" min="1" max="100" value="60"id="opacity">
+                </p>
+                <p>
+                    Cliquez sur une carte pour l'effacer et recliquez pour la faire réapparaître.<br>
+                    Le curseur de la souris permet aussi de faire monter une carte au premier plan.
+                </p>
+                
+                <p>
+                     <b>Images originales</b>
+                </p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A1.jpg" target="_blank">A1</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A2_A3_A4.jpg" target="_blank">A2 A3 A4</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A5.jpg" target="_blank">A5</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A6_A7.jpg" target="_blank">A6 A7</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A8_A9.jpg" target="_blank">A8 A9</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A10.jpg" target="_blank">A10</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A11_1.jpg" target="_blank">A11 1</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A11_2.jpg" target="_blank">A11 2</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A12.jpg" target="_blank">A12</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A13_A14.jpg" target="_blank">A13 A14</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A15_A16.jpg" target="_blank">A15 A16</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A17.jpg" target="_blank">A17</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A18_A19.jpg" target="_blank">A18 A19</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A20_A21.jpg" target="_blank">A20 A21</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A22_A23_A24_1.jpg" target="_blank">A22 A23 A24 1</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A22_A23_A24_2.jpg" target="_blank">A22 A23 A24 2</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A25.jpg" target="_blank">A25</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A26.jpg" target="_blank">A26</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A27_A28_A29_A30.jpg" target="_blank">A27 A28 A29 A30</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A31.jpg" target="_blank">A31</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A32_%20A33.jpg" target="_blank">A32 A33</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A34_A35.jpg" target="_blank">A34 A35</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A36_A37.jpg" target="_blank">A36 A37</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A38.jpg" target="_blank">A38</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A39.jpg" target="_blank">A39</a></p>
+            <p><a href="http://download.codingdavinci.de/index.php/s/CogeyAzf5PzWAyz/download?path=%2F&files=FRAD057_CP1679_A41_A42_A43.jpg" target="_blank">A41 A42 43</a></p>
+                
+            </div>
+
+            <div class="leaflet-sidebar-pane" id="messages">
+                <h1 class="leaflet-sidebar-header">Messages<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            </div>
+        </div>
+</div>
 
 	<div id ='map'></div> 
     

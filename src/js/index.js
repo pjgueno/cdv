@@ -2,6 +2,13 @@ import leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './../css/style.css';
 
+
+import leafletSidebarV2 from 'leaflet-sidebar-v2';
+
+//var leafletSidebarV2 = require("leaflet-sidebar-v2")
+
+//var sidebar = require("leaflet-sidebar-v2");
+
 var map;
 var tiles;
 var cooCenter = [49.2401572, 6.9969327];
@@ -9,6 +16,8 @@ var zoomLevel = 10;
 
 var imageOverlays = L.layerGroup();
 var cartes;
+
+var opacity = 0.6;
 
 
 
@@ -29,26 +38,59 @@ tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
 			attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
 			maxZoom: 18}).addTo(map);
 
+var sidebar = L.control.sidebar({
+    autopan: false,       // whether to maintain the centered map point when opening the sidebar
+    closeButton: true,    // whether t add a close button to the panes
+    container: 'sidebar', // the DOM container or #ID of a predefined sidebar container that should be used
+    position: 'left',     // left or right
+}).addTo(map);
+
+
+
+
 fetch("./../json/cartes.json")
 .then(function(response) {
 return response.json();
 })
 .then(function(data) {
 cartes = data;
-console.log(cartes);
+//console.log(cartes);
     
 for (var i = 0; i < cartes.length; i++) {
 
 var carte = "./../georef/" + cartes[i].id + ".png";
 var bounds = cartes[i].bbox;
-  L.imageOverlay(carte, bounds).setOpacity(0.6).addTo(imageOverlays);
+  L.imageOverlay(carte, bounds,{interactive:true}).addTo(imageOverlays);
 }
 
 imageOverlays.addTo(map);
     
+    imageOverlays.eachLayer(function(layer) {
+    console.log(layer);
+    layer.on("mouseover",function(){layer.bringToFront()})
+    layer.on("click",function(){
+        if (layer.options.opacity == 0){layer.setOpacity(opacity)}else{layer.setOpacity(0)}
+    })
+    layer.setOpacity(opacity);
+});
+    
+    
 });
 
-console.log(imageOverlays);
+
+var slider = document.getElementById("opacity");
+
+slider.oninput = function() {
+  var opacity = this.value /100;
+    
+    imageOverlays.eachLayer(function(layer) {
+    console.log(layer);
+    layer.setOpacity(opacity);
+})
+};
+
+
+//.setOpacity(0.6)
 
 fetch("./../json/cartespostales.json")
 .then(function(response) {
