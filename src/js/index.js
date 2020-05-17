@@ -81,7 +81,7 @@ imageOverlays.addTo(map);
 var slider = document.getElementById("opacity");
 
 slider.oninput = function() {
-  var opacity = this.value /100;
+   opacity = this.value / 100;
     
     imageOverlays.eachLayer(function(layer) {
     console.log(layer);
