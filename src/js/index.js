@@ -48,6 +48,48 @@ imageOverlays.addTo(map);
     
 });
 
+console.log(imageOverlays);
+
+fetch("./../json/cartespostales.json")
+.then(function(response) {
+return response.json();
+})
+.then(function(data) {
+
+    L.geoJSON(data,{
+                      pointToLayer: function (feature, latlng) {
+                       return L.circleMarker(latlng, {
+                        radius:5,
+                        fillColor: " #0000ff",
+                        stroke:false,
+                        fillOpacity: 1})
+                      },
+                      onEachFeature: function (feature, layer) {
+                        var popupContent = "<img src='"+"./../images/"+layer.feature.properties.id +"'>";
+                        layer.bindPopup(popupContent,{closeButton:true, maxWidth: "auto"});
+                      }}).addTo(map);
+});
+
+
+fetch("./../json/flickr.json")
+.then(function(response) {
+return response.json();
+})
+.then(function(data) {
+
+    L.geoJSON(data,{
+                      pointToLayer: function (feature, latlng) {
+                       return L.circleMarker(latlng, {
+                        radius:5,
+                        fillColor: "#ff0000",
+                        stroke:false,
+                        fillOpacity: 1})
+                      },
+                      onEachFeature: function (feature, layer) {
+                        var popupContent = "<img src='"+layer.feature.properties.url +"'>";
+                        layer.bindPopup(popupContent,{closeButton:true, maxWidth: "auto"});
+                      }}).addTo(map);
+});
 
 
 
