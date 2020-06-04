@@ -112,6 +112,25 @@ return response.json();
                       }}).addTo(map);
 });
 
+fetch("./../json/cdv.json")
+.then(function(response) {
+return response.json();
+})
+.then(function(data) {
+
+    L.geoJSON(data,{
+                      pointToLayer: function (feature, latlng) {
+                       return L.circleMarker(latlng, {
+                        radius:5,
+                        fillColor: " #00d329",
+                        stroke:false,
+                        fillOpacity: 1})
+                      },
+                      onEachFeature: function (feature, layer) {
+                        var popupContent = "<img src='"+"./../images/"+layer.feature.properties.id +"'>";
+                        layer.bindPopup(popupContent,{closeButton:true, maxWidth: "auto"});
+                      }}).addTo(map);
+});
 
 fetch("./../json/flickr.json")
 .then(function(response) {

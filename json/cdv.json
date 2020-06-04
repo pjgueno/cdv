@@ -1,0 +1,4 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","geometry":{"type":"Point","coordinates":[6.997364,49.233267]},"properties":{"id":"IMG_20191121_0006.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.996056,49.231976]},"properties":{"id":"IMG_20191121_0007.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.989751,49.235953]},"properties":{"id":"IMG_20191121_0008.jpg"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[6.990459,49.236906]},"properties":{"id":"IMG_20191121_0009.jpg"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[6.992986,49.231437]},"properties":{"id":"IMG_20191121_0014.jpg"}}
+]}
